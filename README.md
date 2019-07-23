@@ -60,7 +60,7 @@ Evaluate the code by running the executable
 $ ./PicardLefschetz.a
 ```
 
-The program outputs the binary files "simplices#.bin", "psi.bin". The files "simplices#.bin" are thimbles. The file "Psi.bin" is the integral as a function of <img src="figures/mu.png" height="15" />.
+The program outputs the binary files "simplices#.bin", "psi.bin". The files "simplices#.bin" are thimbles. The file "psi.bin" is the integral as a function of <img src="figures/mu.png" height="15" />.
 
 ## Collaborators ##
 
