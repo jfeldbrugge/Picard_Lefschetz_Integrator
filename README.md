@@ -4,7 +4,7 @@ Oscillatory integrals, such as the ones occurring in optical interference phenom
 ## Picard-Lefschetz theory ##
 We illustrate the technique by studying the one-dimensional example
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=\Psi(\mu,\nu)&space;=&space;\sqrt{\frac{\nu}{\pi}}&space;\int&space;e^{i\phi(x;\mu)\nu)}\mathrm{d}x" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\Psi(\mu,\nu)&space;=&space;\sqrt{\frac{\nu}{\pi}}&space;\int&space;e^{i\phi(x;\mu)\nu)}\mathrm{d}x" title="\Psi(\mu,\nu) = \sqrt{\frac{\nu}{\pi}} \int e^{i\phi(x;\mu)\nu)}\mathrm{d}x" /></a>
+<a href="https://www.codecogs.com/eqnedit.php?latex=\Psi(\mu;\nu)=\sqrt{\frac{\nu}{\pi}}\int&space;e^{i\phi(x;\mu)\nu}\mathrm{d}x" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\Psi(\mu;\nu)=\sqrt{\frac{\nu}{\pi}}\int&space;e^{i\phi(x;\mu)\nu}\mathrm{d}x" title="\Psi(\mu;\nu)=\sqrt{\frac{\nu}{\pi}}\int e^{i\phi(x;\mu)\nu}\mathrm{d}x" /></a>
 
 with the exponent
 
@@ -12,7 +12,7 @@ with the exponent
 
 with the strength of the lense <a href="https://www.codecogs.com/eqnedit.php?latex=\alpha" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\alpha" title="\alpha" /></a>, the frequency <a href="https://www.codecogs.com/eqnedit.php?latex=\nu" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\nu" title="\nu" /></a>, as a function of <a href="https://www.codecogs.com/eqnedit.php?latex=\mu" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\mu" title="\mu" /></a>. 
 
-Using Picard-Lefschetz theory we can express the integral as a sum of convex integrals along the steepest descent contours <a href="https://www.codecogs.com/eqnedit.php?latex=\mathcal{J}_i" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\mathcal{J}_i" title="\mathcal{J}_i" /></a> of the real part of the exponent, <i>i.e.</i>,
+Using Picard-Lefschetz theory we can express the integral as a sum of convex integrals along the steepest descent contours <a href="https://www.codecogs.com/eqnedit.php?latex=\mathcal{J}_i\subset&space;\mathbb{C}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\mathcal{J}_i\subset&space;\mathbb{C}" title="\mathcal{J}_i\subset \mathbb{C}" /></a> of the real part of the exponent, <i>i.e.</i>,
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\Psi(\mu;\nu)&space;=&space;\sqrt{\frac{\nu}{\pi}}&space;\sum_i&space;\int_{\mathcal{J}_i}e^{i\phi(x;\mu)\nu}\mathrm{d}x" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\Psi(\mu;\nu)&space;=&space;\sqrt{\frac{\nu}{\pi}}&space;\sum_i&space;\int_{\mathcal{J}_i}e^{i\phi(x;\mu)\nu}\mathrm{d}x" title="\Psi(\mu;\nu) = \sqrt{\frac{\nu}{\pi}} \sum_i \int_{\mathcal{J}_i}e^{i\phi(x;\mu)\nu}\mathrm{d}x" /></a>
 
@@ -20,7 +20,7 @@ The evaluation of the integral is thus reduced to finding the relevant steepest 
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=i\phi(x;\mu)=h(x;\mu)&space;&plus;&space;i&space;H(x;\mu)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?i\phi(x;\mu)=h(x;\mu)&space;&plus;&space;i&space;H(x;\mu)" title="i\phi(x;\mu)=h(x;\mu) + i H(x;\mu)" /></a>
 
-The downward flow, corresponding to the real part of the exponent, is defined as 
+The downward flow, corresponding to the real part of the exponent <a href="https://www.codecogs.com/eqnedit.php?latex=h(x)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?h(x)" title="h(x)" /></a>, is defined as 
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\frac{\partial&space;\gamma_\lambda(x)}{\partial&space;\lambda}=-\nabla_x&space;h[\gamma_\lambda(x)]" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\frac{\partial&space;\gamma_\lambda(x)}{\partial&space;\lambda}=-\nabla_x&space;h[\gamma_\lambda(x)]" title="\frac{\partial \gamma_\lambda(x)}{\partial \lambda}=-\nabla_x h[\gamma_\lambda(x)]" /></a>
 
