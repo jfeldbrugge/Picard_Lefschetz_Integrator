@@ -1,5 +1,5 @@
 # Picard-Lefschetz Integrator
-Oscillatory integrals, such as the ones occurring in optical interference phenomena, are central to physics. These integrals are however often expensive to evaluate numerically. Picard-Lefschetz theory can be used to transform analytic oscillatory integrals into sums of convex integrals by deforming the integration domain in the complex plane. In the paper <a href="url">Feldbrugge, Pen, and Turok, 2019</a>, we propose a new numerical integrator, which enables us the efficiently evaluate the interference effects near caustics in lenses. We here present corresponding code for the one-dimensional integral. The code serves as a proof of concept and is not optimal. Different applications might require different implementations.
+Oscillatory integrals, such as the ones occurring in optical interference phenomena, are central to physics. These integrals are however often expensive to evaluate numerically. Picard-Lefschetz theory can be used to transform analytic oscillatory integrals into sums of convex integrals by deforming the integration domain in the complex plane. In the paper <a href="url">Feldbrugge, Pen, and Turok 2019</a>, we propose a new numerical integrator, which enables us the efficiently evaluate the interference effects near caustics in lenses. We here present corresponding code for the one-dimensional integral. The code serves as a proof of concept and is not optimal. Different applications might require different implementations.
 
 ## Picard-Lefschetz theory ##
 We illustrate the technique by studying the one-dimensional example
@@ -42,7 +42,7 @@ The resulting interference patterns for various <a href="https://www.codecogs.co
 
 <img src="figures/Interference.png" height="300" />
 
-For more details on the proceedure <a href="url">Feldbrugge, Pen, and Turok, 2019</a> and the [wiki](https://github.com/jfeldbrugge/Picard_Lefschetz_Integrator/wiki).
+For more details on the proceedure <a href="url">Feldbrugge, Pen, and Turok 2019</a> and the [wiki](https://github.com/jfeldbrugge/Picard_Lefschetz_Integrator/wiki).
 
 ## Implementation ##
 The code is written in C++. The implementation relies only on the standard libraries. Compile the code with
