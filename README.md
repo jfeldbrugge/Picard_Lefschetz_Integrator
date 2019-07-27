@@ -4,39 +4,39 @@ Oscillatory integrals, such as the ones occurring in optical interference phenom
 ## Picard-Lefschetz theory ##
 We illustrate the technique by studying the one-dimensional example
 
-<img src="figures/Integral.png" height="75" />
+<a href="https://www.codecogs.com/eqnedit.php?latex=\Psi(\mu,\nu)&space;=&space;\sqrt{\frac{\nu}{\pi}}&space;\int&space;e^{i\phi(x;\mu)\nu)}\mathrm{d}x" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\Psi(\mu,\nu)&space;=&space;\sqrt{\frac{\nu}{\pi}}&space;\int&space;e^{i\phi(x;\mu)\nu)}\mathrm{d}x" title="\Psi(\mu,\nu) = \sqrt{\frac{\nu}{\pi}} \int e^{i\phi(x;\mu)\nu)}\mathrm{d}x" /></a>
 
 with the exponent
 
-<img src="figures/Exponent.png" height="75" />
+<a href="https://www.codecogs.com/eqnedit.php?latex=i\phi(x;\mu)\nu&space;=&space;i&space;\left[(x-\mu)^2&space;&plus;&space;\frac{\alpha}{1&plus;x^2}&space;\right&space;]\nu" target="_blank"><img src="https://latex.codecogs.com/gif.latex?i\phi(x;\mu)\nu&space;=&space;i&space;\left[(x-\mu)^2&space;&plus;&space;\frac{\alpha}{1&plus;x^2}&space;\right&space;]\nu" title="i\phi(x;\mu)\nu = i \left[(x-\mu)^2 + \frac{\alpha}{1+x^2} \right ]\nu" /></a>
 
-with the strength of the lense <img src="figures/alpha.png" height="15" />, the frequency <img src="figures/nu.png" height="15" />, as a function of <img src="figures/mu.png" height="15" />. 
+with the strength of the lense <a href="https://www.codecogs.com/eqnedit.php?latex=\alpha" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\alpha" title="\alpha" /></a>, the frequency <a href="https://www.codecogs.com/eqnedit.php?latex=\nu" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\nu" title="\nu" /></a>, as a function of <a href="https://www.codecogs.com/eqnedit.php?latex=\mu" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\mu" title="\mu" /></a>. 
 
 Using Picard-Lefschetz theory we can express the integral as a sum of convex integrals along the steepest descent contours <img src="figures/Descent.png" height="15" /> of the exponent, i.e.,
 
-<img src="figures/Integral2.png" height="75" />
+<a href="https://www.codecogs.com/eqnedit.php?latex=\Psi(\mu;\nu)&space;=&space;\sqrt{\frac{\nu}{\pi}}&space;\sum_i&space;\int_{\mathcal{J}_i}e^{i\phi(x;\mu)\nu}\mathrm{d}x" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\Psi(\mu;\nu)&space;=&space;\sqrt{\frac{\nu}{\pi}}&space;\sum_i&space;\int_{\mathcal{J}_i}e^{i\phi(x;\mu)\nu}\mathrm{d}x" title="\Psi(\mu;\nu) = \sqrt{\frac{\nu}{\pi}} \sum_i \int_{\mathcal{J}_i}e^{i\phi(x;\mu)\nu}\mathrm{d}x" /></a>
 
 The evaluation of the integral is thus reduced to the finding the relevant steepest descent contours. We first expand the exponent into a real and an imaginary part
 
-<img src="figures/RealImag.png" height="40" />
+<a href="https://www.codecogs.com/eqnedit.php?latex=i\phi(x;\mu)=h(x;\mu)&space;&plus;&space;i&space;H(x;\mu)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?i\phi(x;\mu)=h(x;\mu)&space;&plus;&space;i&space;H(x;\mu)" title="i\phi(x;\mu)=h(x;\mu) + i H(x;\mu)" /></a>
 
 The downward flow, corresponding to the real part of the exponent, is defined as 
 
-<img src="figures/FlowEquation.png" height="75" />
+<a href="https://www.codecogs.com/eqnedit.php?latex=\frac{\partial&space;\gamma_\lambda(x)}{\partial&space;\lambda}=-\nabla_x&space;h[\gamma_\lambda(x)]" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\frac{\partial&space;\gamma_\lambda(x)}{\partial&space;\lambda}=-\nabla_x&space;h[\gamma_\lambda(x)]" title="\frac{\partial \gamma_\lambda(x)}{\partial \lambda}=-\nabla_x h[\gamma_\lambda(x)]" /></a>
 
 with the boundary condition
 
-<img src="figures/BoundaryCondition.png" height="40" />
+<a href="https://www.codecogs.com/eqnedit.php?latex=\gamma_0(x)=x&space;\in&space;\mathbb{C}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\gamma_0(x)=x&space;\in&space;\mathbb{C}" title="\gamma_0(x)=x \in \mathbb{C}" /></a>
 
-The flow induces a deformation of the original integration contour
+The flow induces a deformation of the original integration domain <a href="https://www.codecogs.com/eqnedit.php?latex=\mathbb{R}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\mathbb{R}" title="\mathbb{R}" /></a> to
 
-<img src="figures/Deformation.png" height="40" />
+<a href="https://www.codecogs.com/eqnedit.php?latex=X_\lambda&space;=&space;\gamma_\lambda(\mathbb{R})&space;\subset&space;\mathbb{C}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?X_\lambda&space;=&space;\gamma_\lambda(\mathbb{R})&space;\subset&space;\mathbb{C}" title="X_\lambda = \gamma_\lambda(\mathbb{R}) \subset \mathbb{C}" /></a>
 
-which, in the limit of large <img src="figures/lambda.png" height="15" />, approaches the thimble 
+which, in the limit of large <a href="https://www.codecogs.com/eqnedit.php?latex=\lambda" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\lambda" title="\lambda" /></a>, approaches the thimble 
 
-<img src="figures/Limit.png" height="40" />
+<a href="https://www.codecogs.com/eqnedit.php?latex=\lim_{\lambda\to\infty}X_\lambda&space;=&space;\mathcal{J}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\lim_{\lambda\to\infty}X_\lambda&space;=&space;\mathcal{J}" title="\lim_{\lambda\to\infty}X_\lambda = \mathcal{J}" /></a>
 
-The deformation for $\mu=0$ is illustrated in the figure
+The deformation for <a href="https://www.codecogs.com/eqnedit.php?latex=\mu=0" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\mu=0" title="\mu=0" /></a> is illustrated in the figure
 
 <img src="figures/Flow.gif" height="600" />
 
