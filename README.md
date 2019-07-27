@@ -42,7 +42,7 @@ The resulting interference patterns for various <a href="https://www.codecogs.co
 
 <img src="figures/Interference.png" height="300" />
 
-For more details on the proceedure <a href="url">Feldbrugge, Pen, and Turok, 2019</a> and the <a href="url">wiki</a>.
+For more details on the proceedure <a href="url">Feldbrugge, Pen, and Turok, 2019</a> and the [wiki](https://github.com/jfeldbrugge/Picard_Lefschetz_Integrator/wiki/Implementation-of-the-code).
 
 ## Implementation ##
 The code is written in C++. The implementation relies only on the standard libraries. Compile the code with
@@ -57,7 +57,7 @@ Evaluate the oscillatory integral by running the executable
 $ ./PicardLefschetz.a
 ```
 
-The program outputs the to types of binary files. The thimbles are saved in the files "simplices#.bin". The integrals for various <a href="https://www.codecogs.com/eqnedit.php?latex=\mu" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\mu" title="\mu" /></a> and <a href="https://www.codecogs.com/eqnedit.php?latex=\nu" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\nu" title="\nu" /></a> are saved in the files "psi#.bin". For more information see the <a href="url">wiki</a>.
+The program outputs the to types of binary files. The thimbles are saved in the files "simplices#.bin". The integrals for various <a href="https://www.codecogs.com/eqnedit.php?latex=\mu" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\mu" title="\mu" /></a> and <a href="https://www.codecogs.com/eqnedit.php?latex=\nu" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\nu" title="\nu" /></a> are saved in the files "psi#.bin". For more information see the [wiki](https://github.com/jfeldbrugge/Picard_Lefschetz_Integrator/wiki/Implementation-of-the-code).
 
 ## Collaborators ##
 
