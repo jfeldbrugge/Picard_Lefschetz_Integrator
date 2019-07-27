@@ -38,7 +38,7 @@ The deformation for <a href="https://www.codecogs.com/eqnedit.php?latex=\mu=0" t
 
 The red points are the saddle points, the black curves are the steepest descent and ascent contours emanated by the saddle points, the blue curve is the deformed integration domain consisting of a number of line segments and the grey areas are the regions for which the real part of the exponent is smaller than a threshold. Along the thimble, the evaluation of the integral is trivial as the integrand is convex. 
 
-The resulting interference patterns for various <a href="https://www.codecogs.com/eqnedit.php?latex=\nu" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\nu" title="\nu" /></a> consist of a single image region in which the intensity is small, a triple-image region in which the intensity oscillates and two fold caustics separating the single- and triple-image regions, as can be observed in the figure
+The resulting interference patterns for various <a href="https://www.codecogs.com/eqnedit.php?latex=\nu" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\nu" title="\nu" /></a> consist of a single image region in which the intensity is small, a triple-image region in which the intensity oscillates and two fold caustics separating the single- and triple-image regions, as can be observed in the figure plotting the intensity <a href="https://www.codecogs.com/eqnedit.php?latex=I&space;(\mu;\nu)=&space;|\Psi(\mu;\nu)|^2" target="_blank"><img src="https://latex.codecogs.com/gif.latex?I&space;(\mu;\nu)=&space;|\Psi(\mu;\nu)|^2" title="I (\mu;\nu)= |\Psi(\mu;\nu)|^2" /></a>.
 
 <img src="figures/Interference.png" height="300" />
 
