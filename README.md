@@ -12,7 +12,7 @@ with the exponent
 
 with the strength of the lense <a href="https://www.codecogs.com/eqnedit.php?latex=\alpha" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\alpha" title="\alpha" /></a>, the frequency <a href="https://www.codecogs.com/eqnedit.php?latex=\nu" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\nu" title="\nu" /></a>, as a function of <a href="https://www.codecogs.com/eqnedit.php?latex=\mu" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\mu" title="\mu" /></a>. 
 
-Using Picard-Lefschetz theory we can express the integral as a sum of convex integrals along the steepest descent contours <img src="figures/Descent.png" height="15" /> of the exponent, <i>i.e.</i>,
+Using Picard-Lefschetz theory we can express the integral as a sum of convex integrals along the steepest descent contours <a href="https://www.codecogs.com/eqnedit.php?latex=\mathcal{J}_i" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\mathcal{J}_i" title="\mathcal{J}_i" /></a> of the real part of the exponent, <i>i.e.</i>,
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\Psi(\mu;\nu)&space;=&space;\sqrt{\frac{\nu}{\pi}}&space;\sum_i&space;\int_{\mathcal{J}_i}e^{i\phi(x;\mu)\nu}\mathrm{d}x" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\Psi(\mu;\nu)&space;=&space;\sqrt{\frac{\nu}{\pi}}&space;\sum_i&space;\int_{\mathcal{J}_i}e^{i\phi(x;\mu)\nu}\mathrm{d}x" title="\Psi(\mu;\nu) = \sqrt{\frac{\nu}{\pi}} \sum_i \int_{\mathcal{J}_i}e^{i\phi(x;\mu)\nu}\mathrm{d}x" /></a>
 
