@@ -36,7 +36,7 @@ The deformation for <a href="https://www.codecogs.com/eqnedit.php?latex=\mu=0" t
 
 <img src="figures/Flow.gif" height="600" />
 
-where the red points are the saddle points, the black curves are the steepest descent and ascent contours emanated by the saddle points, the blue curve is the deformed integration domain consisting of a number of line segments and the grey areas are the regions for which the real part of the exponent is smaller than a threshold. Along the thimble, the evaluation of the integral is trivial as the integrand is convex. 
+The red points are the saddle points, the black curves are the steepest descent and ascent contours emanated by the saddle points, the blue curve is the deformed integration domain consisting of a number of line segments and the grey areas are the regions for which the real part of the exponent is smaller than a threshold. Along the thimble, the evaluation of the integral is trivial as the integrand is convex. 
 
 The resulting interference patterns for various <a href="https://www.codecogs.com/eqnedit.php?latex=\nu" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\nu" title="\nu" /></a> consist of a single image region in which the intensity is small, a triple-image region in which the intensity oscillates and two fold caustics separating the single- and triple-image regions, as can be observed in the figure
 
