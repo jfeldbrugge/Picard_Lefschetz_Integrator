@@ -50,7 +50,7 @@ For more details on the proceedure <a href="url">Feldbrugge, Pen, and Turok 2019
 The code is written in C++. The implementation relies only on the standard libraries. Compile the code with
 
 ```console
-$ g++ main.cpp -o PicardLefschetz.a
+$ g++ -std=c++11 main.cpp -o PicardLefschetz.a
 ```
 
 Evaluate the oscillatory integral by running the executable 
