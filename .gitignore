@@ -1,6 +1,7 @@
 *.bin
 *.exe
 .DS_Store
+*.nb
 
 code
 *.xcodeproj
