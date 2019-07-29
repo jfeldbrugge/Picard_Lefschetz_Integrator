@@ -34,7 +34,7 @@ which, in the limit of large <a href="https://www.codecogs.com/eqnedit.php?latex
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\lim_{\lambda\to\infty}X_\lambda&space;=&space;\mathcal{J}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\lim_{\lambda\to\infty}X_\lambda&space;=&space;\mathcal{J}" title="\lim_{\lambda\to\infty}X_\lambda = \mathcal{J}" /></a>
 
-The deformation for <a href="https://www.codecogs.com/eqnedit.php?latex=\mu=0" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\mu=0" title="\mu=0" /></a> is illustrated in the figure
+The deformation for <a href="https://www.codecogs.com/eqnedit.php?latex=\mu=0" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\mu=0" title="\mu=0" /></a> is illustrated in the figure below.
 
 <img src="figures/Flow.gif" height="600" />
 
