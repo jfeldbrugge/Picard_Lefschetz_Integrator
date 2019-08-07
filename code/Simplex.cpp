@@ -14,8 +14,11 @@ void simplex::flow(const double tau, const double mu,
               h(pnts[0], mu) > thres && h(pnts[1], mu) > thres);
     if(active)
     {
-        pnts[0] = pnts[0] - tau * gradient(pnts[0], 0.01, mu);
-        pnts[1] = pnts[1] - tau * gradient(pnts[1], 0.01, mu);
+        const std::complex<double> g0 = gradient(pnts[0], 0.01, mu);
+        const std::complex<double> g1 = gradient(pnts[1], 0.01, mu);
+        
+        pnts[0] = pnts[0] - tau * g0 / abs(g0);
+        pnts[1] = pnts[1] - tau * g1 / abs(g1);
     }
 }
 

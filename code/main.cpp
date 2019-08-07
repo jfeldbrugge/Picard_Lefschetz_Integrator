@@ -16,7 +16,7 @@ int main(int argc, const char * argv[]) {
 
     const double tau = 0.01;
     const double thres = -2.;
-    const double accuracy = 0.1;
+    const double accuracy = 0.05;
     
     const double muMin = -0.4;
     const double muMax = 0.4;
