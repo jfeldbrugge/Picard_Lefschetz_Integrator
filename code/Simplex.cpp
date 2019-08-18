@@ -9,16 +9,26 @@ simplex::simplex(std::complex<double> p0, std::complex<double> p1)
 void simplex::flow(const double tau, const double mu,
                    const double xMin, const double xMax, const double thres)
 {
-    active = (xMin < real(pnts[0]) && real(pnts[0]) < xMax &&
-              xMin < real(pnts[1]) && real(pnts[1]) < xMax &&
-              h(pnts[0], mu) > thres && h(pnts[1], mu) > thres);
     if(active)
     {
-        const std::complex<double> g0 = gradient(pnts[0], 0.01, mu);
-        const std::complex<double> g1 = gradient(pnts[1], 0.01, mu);
-        
-        pnts[0] = pnts[0] - tau * g0 / abs(g0);
-        pnts[1] = pnts[1] - tau * g1 / abs(g1);
+        active = (xMin < real(pnts[0]) && real(pnts[0]) < xMax &&
+                  xMin < real(pnts[1]) && real(pnts[1]) < xMax &&
+                  h(pnts[0], mu) > thres && h(pnts[1], mu) > thres);
+        if(active)
+        {
+            const std::complex<double> g0 = gradient(pnts[0], 0.01, mu);
+            const std::complex<double> g1 = gradient(pnts[1], 0.01, mu);
+            
+            if(abs(g0) > epsilon)
+            {
+                pnts[0] = pnts[0] - tau * g0 / abs(g0);
+            }
+            
+            if(abs(g1) > epsilon)
+            {
+                pnts[1] = pnts[1] - tau * g1 / abs(g1);
+            }
+        }
     }
 }
 
@@ -95,12 +105,16 @@ void flow(std::vector<simplex> &simplices, const int Niterations, const double t
 {
     for(int i = 0; i < Niterations; i++)
     {
-        int length = int(simplices.size());
-        for(int index = 0; index < length; index++)
+        for(int index = 0; index < simplices.size(); index++)
         {
             simplices[index].flow(tau, mu, xMin, xMax,  thres);
+        }
+
+        for(int index = 0; index < simplices.size(); index++)
+        {
             simplices[index].subdivide(simplices, delta);
         }
+
         clean(simplices);
     }
 }

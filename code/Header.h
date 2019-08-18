@@ -31,7 +31,6 @@ std::complex<double> gradient(const std::complex<double> point, const double eps
 
 void initialize(std::vector<simplex> &simplices, const double xMin, const double xMax, const double delta);
 void clean(std::vector<simplex> &simplices);
-void subdivide(std::vector<simplex> &simplices, const int index, const double delta);
 void refine(const std::vector<std::vector<simplex> > &PL, std::vector<std::vector<simplex> > &PLrefined, const double muMin, const double deltaMu, const double nu, const double accuracy);
 void flow(std::vector<simplex> &simplices, const int Niterations, const double tau, const double mu, const double xMin, const double xMax, const double delta, const double thres);
 
