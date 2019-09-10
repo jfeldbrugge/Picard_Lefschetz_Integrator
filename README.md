@@ -34,17 +34,17 @@ which, in the limit of large <a href="https://www.codecogs.com/eqnedit.php?latex
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\lim_{\lambda\to\infty}X_\lambda&space;=&space;\mathcal{J}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\lim_{\lambda\to\infty}X_\lambda&space;=&space;\mathcal{J}" title="\lim_{\lambda\to\infty}X_\lambda = \mathcal{J}" /></a>
 
-The deformation for <a href="https://www.codecogs.com/eqnedit.php?latex=\mu=0" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\mu=0" title="\mu=0" /></a> is illustrated in the figure
+The deformation for <a href="https://www.codecogs.com/eqnedit.php?latex=\mu=0" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\mu=0" title="\mu=0" /></a> is illustrated in the figure below.
 
 <img src="figures/Flow.gif" height="600" />
 
-The red points are the saddle points, the black curves are the steepest descent and ascent contours emanated by the saddle points, the blue curve is the deformed integration domain consisting of a number of line segments and the grey areas are the regions for which the real part of the exponent is smaller than a threshold. Along the thimble, the evaluation of the integral is trivial as the integrand is convex. 
+The red points are the saddle points, the black curves are the steepest descent and ascent contours emanated by the saddle points, the blue curve is the deformed integration domain consisting of several line segments and the grey areas are the regions for which the real part of the exponent is smaller than a threshold. Along the thimble, the evaluation of the integral is trivial as the integrand is convex. 
 
 The resulting interference patterns for various <a href="https://www.codecogs.com/eqnedit.php?latex=\nu" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\nu" title="\nu" /></a> consist of a single image region in which the intensity is small, a triple-image region in which the intensity oscillates and two fold caustics separating the single- and triple-image regions, as can be observed in the figure plotting the intensity <a href="https://www.codecogs.com/eqnedit.php?latex=I&space;(\mu;\nu)=&space;|\Psi(\mu;\nu)|^2" target="_blank"><img src="https://latex.codecogs.com/gif.latex?I&space;(\mu;\nu)=&space;|\Psi(\mu;\nu)|^2" title="I (\mu;\nu)= |\Psi(\mu;\nu)|^2" /></a>.
 
 <img src="figures/Interference.png" height="300" />
 
-For more details on the proceedure <a href="url">Feldbrugge, Pen, and Turok 2019</a> and the [wiki](https://github.com/jfeldbrugge/Picard_Lefschetz_Integrator/wiki).
+For more details on the procedure <a href="url">Feldbrugge, Pen, and Turok 2019</a> and the [wiki](https://github.com/jfeldbrugge/Picard_Lefschetz_Integrator/wiki).
 
 ## Implementation ##
 The code is written in C++. The implementation relies only on the standard libraries. Compile the code with
@@ -59,7 +59,7 @@ Evaluate the oscillatory integral by running the executable
 $ ./PicardLefschetz.a
 ```
 
-The program outputs the to types of binary files. The thimbles are saved in the files "simplices#.bin". The integrals for various <a href="https://www.codecogs.com/eqnedit.php?latex=\mu" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\mu" title="\mu" /></a> and <a href="https://www.codecogs.com/eqnedit.php?latex=\nu" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\nu" title="\nu" /></a> are saved in the files "psi#.bin". For more information see the [wiki](https://github.com/jfeldbrugge/Picard_Lefschetz_Integrator/wiki).
+The program outputs two types of binary files. The thimbles are saved in the files "simplices#.bin". The integrals for various <a href="https://www.codecogs.com/eqnedit.php?latex=\mu" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\mu" title="\mu" /></a> and <a href="https://www.codecogs.com/eqnedit.php?latex=\nu" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\nu" title="\nu" /></a> are saved in the files "psi#.bin". For more information see the [wiki](https://github.com/jfeldbrugge/Picard_Lefschetz_Integrator/wiki).
 
 ## Collaborators ##
 
