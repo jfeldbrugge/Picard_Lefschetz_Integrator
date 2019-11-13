@@ -39,6 +39,6 @@ std::complex<double> integrate(std::vector<simplex> &simplices, const double mu,
 void writeB(std::vector<simplex> simplices, std::string fileName);
 void writeB(std::vector<std::complex<double> > &psi, std::string fileName);
 
-#include "Exponent.cpp"
-#include "Simplex.cpp"
-#include "Utility.cpp"
+#include "Exponent.h"
+#include "Simplex.h"
+#include "Utility.h"
