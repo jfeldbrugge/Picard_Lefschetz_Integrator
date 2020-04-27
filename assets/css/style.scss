@@ -1,16 +1,4 @@
 ---
 ---
 
-@import "";
-body
-{
-    background-color: black;
-    color: white;
-}
-
-mark
-{
-    /* The background color overrides the color of the whole page */
-    background-color: red;
-    color: black;
-}
+@import "body {background-color: #92a8d1;}";
