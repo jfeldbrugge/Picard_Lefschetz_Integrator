@@ -5,3 +5,5 @@
 
 code
 *.xcodeproj
+docs/Makefile
+docs/index.md

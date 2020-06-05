@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Job Feldbrugge, Ue-Li Pen and Neil Turok" />
+  <title>Picard-Lefschetz integrator</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" type="text/javascript"></script>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Picard-Lefschetz integrator</h1>
+<p class="author">Job Feldbrugge, Ue-Li Pen and Neil Turok</p>
+</header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#picard-lefschetz-theory">Picard-Lefschetz theory</a></li>
+<li><a href="#numerical-picard-lefschetz-theory">Numerical Picard-Lefschetz theory</a>
+<ul>
+<li><a href="#flowing-the-integration-domain">Flowing the integration domain</a></li>
+<li><a href="#romberg-integration">Romberg integration</a></li>
+<li><a href="#using-the-integrator">Using the integrator</a></li>
+</ul></li>
+<li><a href="#examples">Examples</a></li>
+</ul>
+</nav>
+<p>Interference is one of the most universal phenomena in nature. In classical physics, the linear superposition of sound waves, surface waves, radio waves, light or gravitational waves all exhibit the same characteristic patterns of constructive and destructive interference. Interference is also fundamental to quantum physics. The basic quantum amplitudes describing particles or fields are most elegantly formulated as path integrals – sums over trajectories weighted by the phase factor <span class="math inline">\(e^{iS/\hbar}\)</span> with <span class="math inline">\(S\)</span> the action and <span class="math inline">\(\hbar\)</span> Planck’s constant. As ubiquitous as interference and interference patterns are, they are generally hard to compute. The oscillatory integrals involved are only conditionally and not absolutely convergent, meaning they converge slowly and artefacts such as dependence on unphysical cutoffs may be hard to avoid. Likewise, if the integrals are performed iteratively, as is often the only practicable method, conditional convergence is in general insufficient to guarantee uniqueness, since the order in which partial integrals are taken can affect the result.</p>
+<p>Cauchy’s theorem allows one to transform a computationally fragile and expensive, highly oscillatory integral into an exactly equivalent sum of absolutely and rapidly convergent integrals which can be evaluated in polynomial time. We require only that it is possible to analytically continue the lensing phase, expressed in the integrated coordinates, into the complex domain. Picard-Lefschetz theory is a systematic method to find the optimal deformation of the integration domain. We here describe Picard-Lefschetz theory and provide a numerical implementation of Picard-Lefschetz theory for both one- and two-dimensional integrals accompanying the recent papers <a href="https://arxiv.org/abs/1909.04632">Feldbrugge, Pen, and Turok 2019</a>.</p>
+<h2 id="picard-lefschetz-theory">Picard-Lefschetz theory</h2>
+<p>Consider the oscillatory integral <span class="math display">\[I = \int_{\mathbb{R}^n} e^{i \phi(\boldsymbol{x})}\mathrm{d}\boldsymbol{x},\]</span> with the analytic exponent of the integrand <span class="math inline">\(\phi:\mathbb{R}^n \to \mathbb{C}\)</span>. This integral is generally highly oscillatory and difficult to evaluate. We can improve the properties of the integral by analytically continuing the integrand into the complex plane and continuously deforming the integration domain to the Lefschetz thimble <span class="math inline">\(\mathcal{J} \subset \mathbb{C}^n\)</span> removing the oscillatons, <span class="math display">\[I = \int_{\mathcal{J}} e^{i \phi(\boldsymbol{x})}\mathrm{d}\boldsymbol{x}.\]</span></p>
+<p>In order to obtain the Lefschetz thimble, we first express the exponent <span class="math inline">\(i\phi\)</span> in terms of a real and an imaginary part <span class="math display">\[i\phi(\boldsymbol{x}) = h(\boldsymbol{x}) + i H(\boldsymbol{x}).\]</span> Note that <span class="math inline">\(h\)</span>-function determines the magnitude of the integrand. We define the downwards flow <span class="math inline">\(\gamma_\lambda:\mathbb{C}^n\to \mathbb{C}^n\)</span> of the <span class="math inline">\(h\)</span>-function with the differential equation <span class="math display">\[ \frac{\mathrm{d} \gamma_{\lambda}(\boldsymbol{x}_0)}{\mathrm{d}\lambda} = -\nabla h(\gamma_\lambda(\boldsymbol{x}_0)),\]</span> with the boundary condition <span class="math inline">\(\gamma_0(\boldsymbol{x}_0) = \boldsymbol{x}_0\)</span>. The downward flow defines a continous deformation of the integration domain <span class="math inline">\(\gamma_\lambda(\mathbb{R}^n),\)</span> from the original domain at <span class="math inline">\(\lambda=0\)</span> to the Lefschetz thimble in the limit <span class="math inline">\(\lambda \to \infty\)</span>, <span class="math display">\[\mathcal{J} =\lim_{\lambda \to \infty} \gamma_\lambda(\mathbb{R}^n).\]</span> Since the thimble <span class="math inline">\(\mathcal{J}\)</span> is a fixed point of the downward flow <span class="math inline">\(\gamma_\lambda\)</span>, it can generally be expressed as a formal sum over steepest descent contours <span class="math display">\[ \mathcal{J} = \sum_i n_i \mathcal{J}_i,\]</span> with <span class="math inline">\(n_i \in \mathbb{Z}\)</span> and <span class="math inline">\(\mathcal{J}_i\)</span> the steepest descent contour of the saddle point <span class="math inline">\(\bar{\boldsymbol{x}}_i \in \mathbb{C}^n\)</span> of the exponent <span class="math inline">\(i\phi.\)</span> Using the Cauchy-Riemann equation, <span class="math inline">\(\nabla h \cdot \nabla H = 0\)</span>, it straigforwardly follows that the imaginary part, <span class="math inline">\(H\)</span>, is constant along the steepest descent contours, <em>i.e.</em>, <span class="math display">\[H(\boldsymbol{x})|_{\mathcal{J}_i} = H(\bar{\boldsymbol{x}}_i),\]</span> removing the oscillations of the integral, <em>i.e.</em>, <span class="math display">\[I = \int_{\mathcal{J}} e^{i\phi(\boldsymbol{x})} \mathrm{d}\boldsymbol{x} = \sum_i n_i e^{i H(\bar{\boldsymbol{x}}_i} \int_{\mathcal{J}_i} e^{h(\boldsymbol{x})}\mathrm{d}\boldsymbol{x}.\]</span> For more details see …</p>
+<h6 id="the-fresnel-integral">The Fresnel integral</h6>
+<p>The Fresnel integral <span class="math display">\[I_F = \int_{-\infty}^{\infty} e^{i x^2} \mathrm{d}x,\]</span> is a typical example of a conditionally convergent integral. Using the downward flow <span class="math inline">\(\gamma_\lambda\)</span> we can obtain the Lefschetz thimble <span class="math display">\[ \mathcal{J} = \lim_{\lambda\to \infty}\gamma_{\lambda}(\mathbb{R})  = \{(1+i)u | u \in \mathbb{R}\},\]</span> yielding the nonoscillatory Gaussian integral <span class="math display">\[I_F=\int_{\mathcal{J}} e^{i x^2}\mathrm{d}x = (1+i) \int_{-\infty}^{\infty} e^{- 2 u^2}\mathrm{d}u = (1+i)\sqrt{\frac{\pi}{2}}.\]</span> Picard-Lefschetz theory allows us to systematically remove the oscillations of the integrand and express conditionally convergent integrals in terms of absolutely convergent ones. The deformed integral is both better defined and easier to evaluate.</p>
+<h2 id="numerical-picard-lefschetz-theory">Numerical Picard-Lefschetz theory</h2>
+<p>Picard-Lefschetz theory can be used to efficiently evaluate oscillatory integrals. We here describe a numerical scheme for the downward flow of the integration domain and a Romberg integration scheme along the Lefschetz thimble. We subsequently describe a numerical implementation for one- and two-dimensional integrals.</p>
+<h3 id="flowing-the-integration-domain">Flowing the integration domain</h3>
+<h3 id="romberg-integration">Romberg integration</h3>
+<h3 id="using-the-integrator">Using the integrator</h3>
+<h2 id="examples">Examples</h2>
+</body>
+</html>
