@@ -3,6 +3,12 @@
 .DS_Store
 *.nb
 
+code_1D
+code_2D
+old
+code_1D/main.cpp
+code_2D/main.cpp
+
 code
 *.xcodeproj
 docs/Makefile
