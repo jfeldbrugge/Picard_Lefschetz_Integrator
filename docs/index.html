@@ -130,7 +130,7 @@ Fig.1 - The frequency pattern of a thin lens with frequencies <span class="math 
 <p>with <span class="math inline">\(n_i \in \mathbb{Z}\)</span> and <span class="math inline">\(\mathcal{J}_i\)</span> the steepest descent contour of the saddle point <span class="math inline">\(\bar{\boldsymbol{x}}_i \in \mathbb{C}^n\)</span> of the exponent <span class="math inline">\(i\phi.\)</span> Using the Cauchy-Riemann equation, <span class="math inline">\(\nabla h \cdot \nabla H = 0\)</span>, it straigforwardly follows that the imaginary part, <span class="math inline">\(H\)</span>, is constant along the steepest descent contours, <em>i.e.</em>,</p>
 <p><span class="math display">\[H(\boldsymbol{x})|_{\mathcal{J}_i} = H(\bar{\boldsymbol{x}}_i),\]</span></p>
 <p>removing the oscillations of the integral, <em>i.e.</em>,</p>
-<p><span class="math display">\[I = \int_{\mathcal{J}} e^{i\phi(\boldsymbol{x})} \mathrm{d}\boldsymbol{x} = \sum_i n_i e^{i H(\bar{\boldsymbol{x}}_i} \int_{\mathcal{J}_i} e^{h(\boldsymbol{x})}\mathrm{d}\boldsymbol{x}.\]</span></p>
+<p><span class="math display">\[I = \int_{\mathcal{J}} e^{i\phi(\boldsymbol{x})} \mathrm{d}\boldsymbol{x} = \sum_i n_i e^{i H(\bar{\boldsymbol{x}}_i)} \int_{\mathcal{J}_i} e^{h(\boldsymbol{x})}\mathrm{d}\boldsymbol{x}.\]</span></p>
 <p>For more details see …</p>
 <h4 id="an-example-the-fresnel-integral">An example, the Fresnel integral</h4>
 <p>The Fresnel integral</p>
@@ -275,29 +275,29 @@ Fig.5 - The intensity pattern due to lensing by a random screen with a power-law
 </tr>
 </table>
 <figcaption>
-Fig.6 - The lensing of a single gravitational lens with shear <span class="math inline">\(\gamma =0.2\)</span> for the frequencies <span class="math inline">\(\nu=25,50,75\)</span>.
+Fig.6 - The lensing of a single gravitational lens with shear <span class="math inline">\(\gamma =0.2\)</span> for the frequencies <span class="math inline">\(\nu=25,50,75\)</span>. The white dotted line is the caustic from the geometric optics approximation.
 </figcaption>
 </figure>
 <h5 id="binary-gravitational-lens">Binary gravitational lens</h5>
 <p>We finally consider the gravitational binary lens in wave optics, with the phase variation</p>
 <p><span class="math display">\[\varphi(\boldsymbol{x}) = - f_1 \log(\|\boldsymbol{x} - \boldsymbol{r}\|) - f_2 \log(\|\boldsymbol{x} + \boldsymbol{r}\|).\]</span></p>
-<p>We will evaluate the interference pattern for a situation in which the two souces are separated by the Einstein radius <span class="math inline">\(\boldsymbol{r} = (0,1/2)\)</span> and the left source is twice as heavy as the right source, <span class="math inline">\(f_1=1/3\)</span> and <span class="math inline">\(f_2=2/3\)</span>. See Fig. 7 for the geometric optics prediction and the interference patterns for the frequencies <span class="math inline">\(\nu=25\)</span> and <span class="math inline">\(50\)</span>. For more details see <a href="">Feldbrugge, and Turok (2020)</a>.</p>
+<p>We will evaluate the interference pattern for a situation in which the two souces are separated by the Einstein radius <span class="math inline">\(\boldsymbol{r} = (0,1/2)\)</span> and the left source is twice as heavy as the right source, <span class="math inline">\(f_1=1/3\)</span> and <span class="math inline">\(f_2=2/3\)</span>. See Fig. 7 for the geometric optics prediction and the interference patterns for the frequencies <span class="math inline">\(\nu=25, 50\)</span> and <span class="math inline">\(75\)</span>. For more details see <a href="">Feldbrugge, and Turok (2020)</a>.</p>
 <figure>
 <table align="left" width="100%" id="FIG">
 <tr>
-<td>
-<img src='figures/Binary_Geometric.png' width=100% />
-</td>
 <td>
 <img src='figures/Binary_Wave_nu=25.png' width=100% />
 </td>
 <td>
 <img src='figures/Binary_Wave_nu=50.png' width=100% />
 </td>
+<td>
+<img src='figures/Binary_Wave_nu=75.png' width=100% />
+</td>
 </tr>
 </table>
 <figcaption>
-Fig.7 - The intensity pattern of a binary gravitational lens with <span class="math inline">\(f_1=1/3,f_2=2/3\)</span> seperated by an Einstein radius, <span class="math inline">\(\boldsymbol{r}=(0,1/2)\)</span> for the frequencies <span class="math inline">\(\nu=25\)</span> and <span class="math inline">\(50\)</span>. The left panel is the intensity in geometric optics. The central and right panel is the interference pattern in wave optics for the frequency <span class="math inline">\(\nu=25\)</span> and <span class="math inline">\(50\)</span>.
+Fig.7 - The intensity pattern of a binary gravitational lens with <span class="math inline">\(f_1=1/3,f_2=2/3\)</span> seperated by an Einstein radius, <span class="math inline">\(\boldsymbol{r}=(0,1/2)\)</span> for the frequencies <span class="math inline">\(\nu=25, 50\)</span> and <span class="math inline">\(75\)</span> (from left to right). The white dotted line is the caustic from the geometric optics approximation.
 </figcaption>
 </figure>
 </body>
