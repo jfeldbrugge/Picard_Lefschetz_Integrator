@@ -178,13 +178,120 @@ Fig. 3 - The Picard-Lefschetz diagram for the radial variable for shear <span cl
 Fig. 4 - The lensing of a single gravitational lens with shear <span class="math inline">\(\gamma =0.1, 0.2, 0.3, 0.4\)</span> and <span class="math inline">\(0.5\)</span> (respectively the upper to the lower rows) and for the frequencies <span class="math inline">\(\nu=25,50,75\)</span> and <span class="math inline">\(100\)</span> (respectively the left to the right collumns). The white diamond is the caustic of the geometric optics approximation. The rings at the outskirts for high frequency and shear are aliasing artifacts.
 </figcaption>
 </figure>
-<!--
-### Binary gravitational lens
-The binary gravitational lens is described by the phase variation
-
-$$\varphi(\boldsymbol{x}) = -f_1 \log(\|\boldsymbol{x} - \boldsymbol{x}_1\|) - f_2 \log(\|\boldsymbol{x} - \boldsymbol{x}_2\|).$$
-
-Using elliptical coordinates, 
--->
+<h3 id="binary-gravitational-lens">Binary gravitational lens</h3>
+<p>The binary gravitational lens is described by the phase variation</p>
+<p><span class="math display">\[\varphi(\boldsymbol{x}) = -f_1 \log(\|\boldsymbol{x} - \boldsymbol{x}_1\|) - f_2 \log(\|\boldsymbol{x} - \boldsymbol{x}_2\|).\]</span></p>
+<p>For simplicity, we will let <span class="math inline">\(\boldsymbol{x}_1 = (-a,0)\)</span> and <span class="math inline">\(\boldsymbol{x}_1 = (a,0)\)</span> for some <span class="math inline">\(a&gt;0\)</span>. Using elliptic coordinates, <span class="math inline">\(\boldsymbol{x}(\tau,\sigma) = a(\cosh \tau \cos \sigma, \sinh \tau \sin \sigma)\)</span>, with <span class="math inline">\(0 &lt; \tau &lt; \infty\)</span> and <span class="math inline">\(0 &lt; \sigma \leq 2\pi\)</span>. Geometrically, the elliptic coordinates has two foci at the locations of the binary <span class="math inline">\(\boldsymbol{x}_1\)</span> and <span class="math inline">\(\boldsymbol{x}_2\)</span>. The constant <span class="math inline">\(\tau\)</span> contours form ovals around the foci (the red curves in Fig. 5). The constant <span class="math inline">\(\sigma\)</span> contours pass between the to foci (the blue curves in Fig. 5).</p>
+<figure>
+<img src='figures_GL/ellipticCoordinates.png' width = 50% />
+<figcaption>
+Fig. 5 - Elliptic coordinates for <span class="math inline">\(a=1\)</span>. The red curves are the constant <span class="math inline">\(\tau\)</span> contours. The blue cirves are constant <span class="math inline">\(\sigma\)</span> contours. The black line segments connect the upper green point to the foci, at <span class="math inline">\(\boldsymbol{x}=(\pm 1, 0)\)</span>, of the elliptic coordinate system.
+</figcaption>
+</figure>
+<p>Note that the variables <span class="math inline">\(\tau\)</span> and <span class="math inline">\(\sigma\)</span> resemble the radial and angular polar variables <span class="math inline">\(r\)</span> and <span class="math inline">\(\theta\)</span>. In elliptic coordinates, we obtain the identities</p>
+<p><span class="math display">\[ \begin{aligned}
+\|\boldsymbol{x} - \boldsymbol{x}_1\| &amp;= a(\cosh \tau + \cos \tau),\\
+\|\boldsymbol{x} - \boldsymbol{x}_2\| &amp;= a(\cosh \tau - \cos \tau).
+\end{aligned}\]</span></p>
+<p>In the measure in Cartesian and elliptic coordinates are related by the Jacobian</p>
+<p><span class="math display">\[J(\tau,\sigma) = \frac{a^2}{2} \left( \cosh 2\tau - \cos 2 \sigma\right).\]</span></p>
+<p>Following the calculation for the single gravitational lens, we perform the radial <span class="math inline">\(\tau\)</span>-integral using Picard-Lefschetz theory</p>
+<p><span class="math display">\[g_\sigma(\boldsymbol{\mu}) = \int_{\mathcal{J}_\sigma} e^{i \nu \left[ \frac{1}{2}(\boldsymbol{x}(\tau,\sigma) - \boldsymbol{\mu})^2 - f_1 \log(a(\cosh \tau + \cos \tau))- f_2 \log(a(\cosh \tau - \cos \tau))\right] + \log(J(\tau,\sigma))}\mathrm{d}\tau.\]</span></p>
+<p>For this integral, it turns out to be most efficient to extend the original integration domain for <span class="math inline">\(\tau\)</span> to the real line <span class="math inline">\(\mathbb{R}\)</span>. See Fig. 6 for two examples of the thimble <span class="math inline">\(\mathcal{J}_\sigma\)</span>.</p>
+<figure>
+<table align="left" width="100%" id="FIG">
+<tr>
+<td>
+<img src='figures_GL/DoubleLensPL_sigma=pi_3_mux=1.png' width=100% />
+</td>
+<td>
+<img src='figures_GL/DoubleLensPL_sigma=pi_3_mux=1.png' width=100% />
+</td>
+</tr>
+</table>
+<figcaption>
+Fig. 6 - The Picard-Lefschetz diagram in the complex <span class="math inline">\(\tau\)</span>-plane for <span class="math inline">\(\nu=1,a=1\)</span>. The red points are the saddle points, the green points are the branch points and the blue curves are the relevant steepest descent contours.
+</figcaption>
+</figure>
+<p>The amplitude is now expressed as an angular integral over a compact domain which we evaluate using conventional integration techniques</p>
+<p><span class="math display">\[\psi(\boldsymbol{\mu}) = \frac{\nu}{4\pi i} \int_0^{2\pi} g_{\sigma}(\boldsymbol{\mu}) \mathrm{d}\sigma.\]</span></p>
+<p>See Fig. 7 for an illustration.</p>
+<figure>
+<table align="left" width="100%" id="FIG">
+<tr>
+<td>
+<img src='figures_GL/Intensity_s=0.1_nu=10.png' width=100% />
+</td>
+<td>
+<img src='figures_GL/Intensity_s=0.1_nu=20.png' width=100% />
+</td>
+<td>
+<img src='figures_GL/Intensity_s=0.1_nu=40.png' width=100% />
+</td>
+<td>
+<img src='figures_GL/Intensity_s=0.1_nu=80.png' width=100% />
+</td>
+</tr>
+<tr>
+<td>
+<img src='figures_GL/Intensity_s=0.3_nu=10.png' width=100% />
+</td>
+<td>
+<img src='figures_GL/Intensity_s=0.3_nu=20.png' width=100% />
+</td>
+<td>
+<img src='figures_GL/Intensity_s=0.3_nu=40.png' width=100% />
+</td>
+<td>
+<img src='figures_GL/Intensity_s=0.3_nu=80.png' width=100% />
+</td>
+</tr>
+<tr>
+<td>
+<img src='figures_GL/Intensity_s=0.5_nu=10.png' width=100% />
+</td>
+<td>
+<img src='figures_GL/Intensity_s=0.5_nu=20.png' width=100% />
+</td>
+<td>
+<img src='figures_GL/Intensity_s=0.5_nu=40.png' width=100% />
+</td>
+<td>
+<img src='figures_GL/Intensity_s=0.5_nu=80.png' width=100% />
+</td>
+</tr>
+<tr>
+<td>
+<img src='figures_GL/Intensity_s=0.7_nu=10.png' width=100% />
+</td>
+<td>
+<img src='figures_GL/Intensity_s=0.7_nu=20.png' width=100% />
+</td>
+<td>
+<img src='figures_GL/Intensity_s=0.7_nu=40.png' width=100% />
+</td>
+<td>
+<img src='figures_GL/Intensity_s=0.7_nu=80.png' width=100% />
+</td>
+</tr>
+<tr>
+<td>
+<img src='figures_GL/Intensity_s=1_nu=10.png' width=100% />
+</td>
+<td>
+<img src='figures_GL/Intensity_s=1_nu=20.png' width=100% />
+</td>
+<td>
+<img src='figures_GL/Intensity_s=1_nu=40.png' width=100% />
+</td>
+<td>
+<img src='figures_GL/Intensity_s=1_nu=80.png' width=100% />
+</td>
+</tr>
+</table>
+<figcaption>
+Fig. 7 - The intensity of the binary system for several configurations and frequencies.
+</figcaption>
+</figure>
 </body>
 </html>
