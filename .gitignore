@@ -13,3 +13,4 @@ code
 *.xcodeproj
 docs/Makefile
 docs/index.md
+docs/Gravitational_Lens.md
